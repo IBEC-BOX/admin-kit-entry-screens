@@ -2,8 +2,8 @@
 
 return [
     'resource' => [
-        'label' => 'SingleName',
-        'plural_label' => 'Skeleton',
+        'label' => 'EntryScreen',
+        'plural_label' => 'EntryScreens',
 
         'id' => 'ID',
         'title' => 'Title',

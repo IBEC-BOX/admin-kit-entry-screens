@@ -1,17 +1,17 @@
 <?php
 
-namespace VendorName\Skeleton\UI\Filament\Resources;
+namespace AdminKit\EntryScreens\UI\Filament\Resources;
 
 use AdminKit\Core\Forms\Components\TranslatableTabs;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use VendorName\Skeleton\Models\SingleName;
-use VendorName\Skeleton\UI\Filament\Resources\SingleNameResource\Pages;
+use AdminKit\EntryScreens\Models\EntryScreen;
+use AdminKit\EntryScreens\UI\Filament\Resources\EntryScreenResource\Pages;
 
-class SingleNameResource extends Resource
+class EntryScreenResource extends Resource
 {
-    protected static ?string $model = SingleName::class;
+    protected static ?string $model = EntryScreen::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -21,7 +21,7 @@ class SingleNameResource extends Resource
             ->schema([
                 TranslatableTabs::make(fn ($locale) => Forms\Components\Tabs\Tab::make($locale)->schema([
                     Forms\Components\TextInput::make('title')
-                        ->label(__('skeleton::skeleton_without_prefix.resource.title'))
+                        ->label(__('admin-kit-entry-screens::entry-screens.resource.title'))
                         ->required($locale === app()->getLocale()),
                 ])),
             ])
@@ -33,12 +33,12 @@ class SingleNameResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
-                    ->label(__('skeleton::skeleton_without_prefix.resource.id'))
+                    ->label(__('admin-kit-entry-screens::entry-screens.resource.id'))
                     ->sortable(),
                 Tables\Columns\TextColumn::make('title')
-                    ->label(__('skeleton::skeleton_without_prefix.resource.title')),
+                    ->label(__('admin-kit-entry-screens::entry-screens.resource.title')),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label(__('skeleton::skeleton_without_prefix.resource.created_at')),
+                    ->label(__('admin-kit-entry-screens::entry-screens.resource.created_at')),
             ])
             ->defaultSort('id', 'desc')
             ->filters([
@@ -64,24 +64,24 @@ class SingleNameResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListSingleName::route('/'),
-            'create' => Pages\CreateSingleName::route('/create'),
-            'edit' => Pages\EditSingleName::route('/{record}/edit'),
+            'index' => Pages\ListEntryScreen::route('/'),
+            'create' => Pages\CreateEntryScreen::route('/create'),
+            'edit' => Pages\EditEntryScreen::route('/{record}/edit'),
         ];
     }
 
     public static function getLabel(): ?string
     {
-        return __('skeleton::skeleton_without_prefix.resource.label');
+        return __('admin-kit-entry-screens::entry-screens.resource.label');
     }
 
     public static function getPluralLabel(): ?string
     {
-        return __('skeleton::skeleton_without_prefix.resource.plural_label');
+        return __('admin-kit-entry-screens::entry-screens.resource.plural_label');
     }
 
     public static function getNavigationGroup(): ?string
     {
-        return __('skeleton::skeleton_without_prefix.resource.plural_label');
+        return __('admin-kit-entry-screens::entry-screens.resource.plural_label');
     }
 }

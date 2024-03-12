@@ -1,22 +1,22 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace AdminKit\EntryScreens;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use VendorName\Skeleton\UI\Filament\Resources\SingleNameResource;
+use AdminKit\EntryScreens\UI\Filament\Resources\EntryScreenResource;
 
 class FilamentPlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'filament-plugin-:package_slug';
+        return 'filament-plugin-admin-kit-entry-screens';
     }
 
     public function register(Panel $panel): void
     {
         $panel->resources([
-            SingleNameResource::class,
+            EntryScreenResource::class,
         ]);
     }
 

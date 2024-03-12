@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use VendorName\Skeleton\UI\API\Controllers\SingleNameController;
+use AdminKit\EntryScreens\UI\API\Controllers\EntryScreenController;
 
-Route::get('/skeleton_without_prefix', [SingleNameController::class, 'index']);
-Route::get('/skeleton_without_prefix/{id}', [SingleNameController::class, 'show']);
+Route::get('/entry-screens', [EntryScreenController::class, 'index']);
+Route::get('/entry-screens/{id}', [EntryScreenController::class, 'show']);
