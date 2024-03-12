@@ -2,8 +2,8 @@
 
 namespace AdminKit\EntryScreens\UI\Filament\Resources\EntryScreenResource\Pages;
 
-use Filament\Resources\Pages\CreateRecord;
 use AdminKit\EntryScreens\UI\Filament\Resources\EntryScreenResource;
+use Filament\Resources\Pages\CreateRecord;
 
 class CreateEntryScreen extends CreateRecord
 {

@@ -3,11 +3,11 @@
 namespace AdminKit\EntryScreens\UI\Filament\Resources;
 
 use AdminKit\Core\Forms\Components\TranslatableTabs;
+use AdminKit\EntryScreens\Models\EntryScreen;
+use AdminKit\EntryScreens\UI\Filament\Resources\EntryScreenResource\Pages;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use AdminKit\EntryScreens\Models\EntryScreen;
-use AdminKit\EntryScreens\UI\Filament\Resources\EntryScreenResource\Pages;
 
 class EntryScreenResource extends Resource
 {

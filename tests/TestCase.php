@@ -2,10 +2,10 @@
 
 namespace AdminKit\EntryScreens\Tests;
 
+use AdminKit\EntryScreens\EntryScreensServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use AdminKit\EntryScreens\EntryScreensServiceProvider;
 
 class TestCase extends Orchestra
 {

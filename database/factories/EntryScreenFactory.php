@@ -2,8 +2,8 @@
 
 namespace AdminKit\EntryScreens\Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use AdminKit\EntryScreens\Models\EntryScreen;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class EntryScreenFactory extends Factory
 {
