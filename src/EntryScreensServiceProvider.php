@@ -2,10 +2,10 @@
 
 namespace AdminKit\EntryScreens;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use AdminKit\EntryScreens\Commands\EntryScreensCommand;
 use AdminKit\EntryScreens\Providers\RouteServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class EntryScreensServiceProvider extends PackageServiceProvider
 {

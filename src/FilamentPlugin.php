@@ -2,9 +2,9 @@
 
 namespace AdminKit\EntryScreens;
 
+use AdminKit\EntryScreens\UI\Filament\Resources\EntryScreenResource;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use AdminKit\EntryScreens\UI\Filament\Resources\EntryScreenResource;
 
 class FilamentPlugin implements Plugin
 {

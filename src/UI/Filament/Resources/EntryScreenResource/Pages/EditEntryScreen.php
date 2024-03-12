@@ -2,9 +2,9 @@
 
 namespace AdminKit\EntryScreens\UI\Filament\Resources\EntryScreenResource\Pages;
 
+use AdminKit\EntryScreens\UI\Filament\Resources\EntryScreenResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
-use AdminKit\EntryScreens\UI\Filament\Resources\EntryScreenResource;
 
 class EditEntryScreen extends EditRecord
 {
