@@ -2,13 +2,13 @@
 
 namespace AdminKit\EntryScreens\Models;
 
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\Translatable\HasTranslations;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Illuminate\Database\Eloquent\Casts\Attribute;
 use AdminKit\Core\Abstracts\Models\AbstractModel;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use AdminKit\EntryScreens\Database\Factories\EntryScreenFactory;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\Translatable\HasTranslations;
 
 /**
  * @property-read string $title

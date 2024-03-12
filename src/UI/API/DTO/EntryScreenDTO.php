@@ -2,17 +2,16 @@
 
 namespace AdminKit\EntryScreens\UI\API\DTO;
 
-use Spatie\LaravelData\Data;
 use AdminKit\EntryScreens\Models\EntryScreen;
+use Spatie\LaravelData\Data;
 
 class EntryScreenDTO extends Data
 {
     public function __construct(
-        public string  $title,
-        public string  $background,
+        public string $title,
+        public string $background,
         public ?string $subtitle,
-    )
-    {
+    ) {
     }
 
     public static function fromModel(EntryScreen $entryScreen): EntryScreenDTO
