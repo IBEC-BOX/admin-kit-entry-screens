@@ -2,6 +2,7 @@
 
 namespace AdminKit\EntryScreens\UI\Filament\Resources;
 
+use Filament\Forms\Components\Tabs\Tab;
 use AdminKit\Core\Forms\Components\TranslatableTabs;
 use Filament\Forms;
 use Filament\Resources\Resource;
@@ -19,11 +20,17 @@ class EntryScreenResource extends Resource
     {
         return $form
             ->schema([
-                TranslatableTabs::make(fn ($locale) => Forms\Components\Tabs\Tab::make($locale)->schema([
-                    Forms\Components\TextInput::make('title')
+                Forms\Components\SpatieMediaLibraryFileUpload::make('background')
+                    ->label('Фон')
+                    ->required()
+                    ->columnSpan(2),
+                TranslatableTabs::make(fn ($locale) => Tab::make($locale)->schema([
+                    Forms\Components\TextInput::make('title.'.$locale)
                         ->label(__('admin-kit-entry-screens::entry-screens.resource.title'))
-                        ->required($locale === app()->getLocale()),
-                ])),
+                        ->required(),
+                    Forms\Components\TextInput::make('subtitle.'.$locale)
+                        ->label(__('admin-kit-entry-screens::entry-screens.resource.subtitle')),
+                ]))->columnSpan(2),
             ])
             ->columns(1);
     }
@@ -76,11 +83,6 @@ class EntryScreenResource extends Resource
     }
 
     public static function getPluralLabel(): ?string
-    {
-        return __('admin-kit-entry-screens::entry-screens.resource.plural_label');
-    }
-
-    public static function getNavigationGroup(): ?string
     {
         return __('admin-kit-entry-screens::entry-screens.resource.plural_label');
     }

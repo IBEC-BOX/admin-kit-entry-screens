@@ -2,11 +2,12 @@
 
 return [
     'resource' => [
-        'label' => 'EntryScreen',
-        'plural_label' => 'EntryScreens',
+        'label' => 'Вступительный экран',
+        'plural_label' => 'Вступительные экраны',
 
         'id' => 'ID',
-        'title' => 'Title',
+        'title' => 'Заголовок',
+        'subtitle' => 'Подзаголовок',
 
         'created_at' => 'Создан',
         'updated_at' => 'Обновлен',
