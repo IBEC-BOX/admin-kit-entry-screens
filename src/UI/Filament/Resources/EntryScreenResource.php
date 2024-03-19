@@ -23,7 +23,10 @@ class EntryScreenResource extends Resource
                 Forms\Components\SpatieMediaLibraryFileUpload::make('background')
                     ->label('Фон')
                     ->required()
-                    ->columnSpan(2),
+                    ->image()
+                    ->columnSpan(2)
+                    ->optimize('webp')
+                    ->resize(30),
                 TranslatableTabs::make(fn ($locale) => Tab::make($locale)->schema([
                     Forms\Components\TextInput::make('title.'.$locale)
                         ->label(__('admin-kit-entry-screens::entry-screens.resource.title'))
