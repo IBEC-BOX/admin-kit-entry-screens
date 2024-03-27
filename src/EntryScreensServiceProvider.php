@@ -21,7 +21,10 @@ class EntryScreensServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasTranslations()
-            ->hasMigration('create_admin_kit_entry_screens_table')
+            ->hasMigrations([
+                'create_admin_kit_entry_screens_table',
+                'add_yt_link_column_to_admin_kit_entry_screens_table',
+            ])
             ->hasCommand(EntryScreensCommand::class);
     }
 

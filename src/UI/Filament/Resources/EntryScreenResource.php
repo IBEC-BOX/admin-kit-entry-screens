@@ -20,13 +20,26 @@ class EntryScreenResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\SpatieMediaLibraryFileUpload::make('background')
-                    ->label('Фон')
-                    ->required()
-                    ->image()
-                    ->columnSpan(2)
-                    ->optimize('webp')
-                    ->resize(30),
+                Forms\Components\Tabs::make(__('admin-kit-entry-screens::entry-screens.resource.background'))
+                    ->tabs(fn () => [
+                        Tab::make(__('admin-kit-entry-screens::entry-screens.resource.image'))
+                            ->schema([
+                                Forms\Components\SpatieMediaLibraryFileUpload::make('background')
+                                    ->label(__('admin-kit-entry-screens::entry-screens.resource.image'))
+                                    ->requiredWithout('yt_link')
+                                    ->image()
+                                    ->optimize('webp')
+                                    ->resize(30),
+                            ]),
+                        Tab::make(__('admin-kit-entry-screens::entry-screens.resource.video'))
+                            ->schema([
+                                Forms\Components\TextInput::make('yt_link')
+                                    ->label(__('admin-kit-entry-screens::entry-screens.resource.yt_link'))
+                                    ->requiredWithout('background')
+                                    ->placeholder('https://www.youtube.com/watch?v=dQw4w9WgXcQ'),
+                            ]),
+                    ])
+                    ->activeTab(fn (EntryScreen|null $record) => $record?->yt_link ? 2 : 1),
                 TranslatableTabs::make(fn ($locale) => Tab::make($locale)->schema([
                     Forms\Components\TextInput::make('title.'.$locale)
                         ->label(__('admin-kit-entry-screens::entry-screens.resource.title'))
