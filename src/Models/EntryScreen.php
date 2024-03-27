@@ -2,12 +2,11 @@
 
 namespace AdminKit\EntryScreens\Models;
 
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\URL;
 use AdminKit\Core\Abstracts\Models\AbstractModel;
 use AdminKit\EntryScreens\Database\Factories\EntryScreenFactory;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Translatable\HasTranslations;

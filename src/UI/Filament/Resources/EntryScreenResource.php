@@ -39,7 +39,7 @@ class EntryScreenResource extends Resource
                                     ->placeholder('https://www.youtube.com/watch?v=dQw4w9WgXcQ'),
                             ]),
                     ])
-                    ->activeTab(fn (EntryScreen|null $record) => $record?->yt_link ? 2 : 1),
+                    ->activeTab(fn (?EntryScreen $record) => $record?->yt_link ? 2 : 1),
                 TranslatableTabs::make(fn ($locale) => Tab::make($locale)->schema([
                     Forms\Components\TextInput::make('title.'.$locale)
                         ->label(__('admin-kit-entry-screens::entry-screens.resource.title'))
