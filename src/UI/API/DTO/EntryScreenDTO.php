@@ -17,8 +17,7 @@ class EntryScreenDTO extends Data
         public string $title,
         public string $background,
         public ?string $subtitle,
-    ) {
-    }
+    ) {}
 
     public static function fromModel(EntryScreen $entryScreen): EntryScreenDTO
     {
