@@ -2,6 +2,4 @@
 
 namespace AdminKit\EntryScreens;
 
-class EntryScreens
-{
-}
+class EntryScreens {}

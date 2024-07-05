@@ -4,18 +4,20 @@ namespace AdminKit\EntryScreens\UI\API\DTO;
 
 use AdminKit\EntryScreens\Models\EntryScreen;
 use Spatie\LaravelData\Attributes\MapName;
+use Spatie\LaravelData\Concerns\WithDeprecatedCollectionMethod;
 use Spatie\LaravelData\Data;
 use Spatie\LaravelData\Mappers\SnakeCaseMapper;
 
 #[MapName(SnakeCaseMapper::class)]
 class EntryScreenDTO extends Data
 {
+    use WithDeprecatedCollectionMethod;
+
     public function __construct(
         public string $title,
         public string $background,
         public ?string $subtitle,
-    ) {
-    }
+    ) {}
 
     public static function fromModel(EntryScreen $entryScreen): EntryScreenDTO
     {
